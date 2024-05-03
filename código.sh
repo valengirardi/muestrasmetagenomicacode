@@ -30,7 +30,7 @@ cd ${OUTPUT_DIR}/
 multiqc 
 cd 
 
-SEGUNDA PARTE (INTENTANDO HACER EL TRIMMING QUE HACE CRISTIÁN):
+# SEGUNDA PARTE (INTENTANDO HACER EL TRIMMING QUE HACE CRISTIÁN):
 #Corte de las secuencias:
 INPUT_DIR=/Users/valentinagirardi/Downloads/MUESTRASBITETK/data
 OUTPUT_DIR=/Users/valentinagirardi/Downloads/MUESTRASBITETK/04_trimming
@@ -38,56 +38,56 @@ mkdir -p ${OUTPUT_DIR}
 cd ${OUTPUT_DIR}
 
 #  opción 1:
-CORTO LAS PRIMERAS 8 PARA R1-C_1:
+# CORTO LAS PRIMERAS 8 PARA R1-C_1:
 cutadapt \
 --cut 8 \
 -o ${OUTPUT_DIR}/R1-C_trimmed_1.fastq \
 ${INPUT_DIR}/R1-C_1.fastq \
 > ${OUTPUT_DIR}/R1-C_trimmed_1_cut8_cutadapt_log.txt
 
-CORTO LAS PRIMERAS 18 PARA R2-10_1:
+# CORTO LAS PRIMERAS 18 PARA R2-10_1:
 cutadapt \
 --cut 18 \
 -o ${OUTPUT_DIR}/R2-10_trimmed_1.fastq \
 ${INPUT_DIR}/R2-10_1.fastq \
 > ${OUTPUT_DIR}/R2-10_trimmed_1_cut18_cutadapt_log.txt
 
-CORTO LAS PRIMERAS 18 PARA R3-30_1:
+# CORTO LAS PRIMERAS 18 PARA R3-30_1:
 cutadapt \
 --cut 18 \
 -o ${OUTPUT_DIR}/R3-30_trimmed_1.fastq \
 ${INPUT_DIR}/R3-30_1.fastq \
 > ${OUTPUT_DIR}/R3-30_trimmed_1_cut18_cutadapt_log.txt
 
-CORTO LAS PRIMERAS 8 PARA R4-50_1:
+# CORTO LAS PRIMERAS 8 PARA R4-50_1:
 cutadapt \
 --cut 8 \
 -o ${OUTPUT_DIR}/R4-50_trimmed_1.fastq \
 ${INPUT_DIR}/R4-50_1.fastq \
 > ${OUTPUT_DIR}/R4-50_trimmed_1_cut8_cutadapt_log.txt
 
-CORTO LAS PRIMERAS 18 PARA R5-70_1:
+# CORTO LAS PRIMERAS 18 PARA R5-70_1:
 cutadapt \
 --cut 18 \
 -o ${OUTPUT_DIR}/R5-70_trimmed_1.fastq \
 ${INPUT_DIR}/R5-70_1.fastq \
 > ${OUTPUT_DIR}/R5-70_trimmed_1_cut18_cutadapt_log.txt
 
-CORTO LAS PRIMERAS 8 PARA R6-100_1:
+# CORTO LAS PRIMERAS 8 PARA R6-100_1:
 cutadapt \
 --cut 8 \
 -o ${OUTPUT_DIR}/R6-100_trimmed_1.fastq \
 ${INPUT_DIR}/R6-100_1.fastq \
 > ${OUTPUT_DIR}/R6-100_trimmed_1_cut8_cutadapt_log.txt
 
-CORTO LAS PRIMERAS 18 PARA TK1-t0_1:
+# CORTO LAS PRIMERAS 18 PARA TK1-t0_1:
 cutadapt \
 --cut 18 \
 -o ${OUTPUT_DIR}/TK1-t0_trimmed_1.fastq \
 ${INPUT_DIR}/TK1-t0_1.fastq \
 > ${OUTPUT_DIR}/TK1-t0_trimmed_1_cut18_cutadapt_log.txt
 
-CORTO LAS PRIMERAS 18 PARA TK1-t30_1:
+# CORTO LAS PRIMERAS 18 PARA TK1-t30_1:
 cutadapt \
 --cut 18 \
 -o ${OUTPUT_DIR}/TK1-t30_trimmed_1.fastq \
@@ -101,71 +101,71 @@ cutadapt \
 ${INPUT_DIR}/TK1-t60_1.fastq \
 > ${OUTPUT_DIR}/TK1-t60_trimmed_1_cut18_cutadapt_log.txt
 
-CORTO LAS PRIMERAS 8 PARA R1-C_2:
+# CORTO LAS PRIMERAS 8 PARA R1-C_2:
 cutadapt \
 --cut 8 \
 -o ${OUTPUT_DIR}/R1-C_trimmed_2.fastq \
 ${INPUT_DIR}/R1-C_2.fastq \
 > ${OUTPUT_DIR}/R1-C_trimmed_2_cut8_cutadapt_log.txt
 
-CORTO LAS PRIMERAS 18 PARA R2-10_2:
+# CORTO LAS PRIMERAS 18 PARA R2-10_2:
 cutadapt \
 --cut 18 \
 -o ${OUTPUT_DIR}/R2-10_trimmed_2.fastq \
 ${INPUT_DIR}/R2-10_2.fastq \
 > ${OUTPUT_DIR}/R2-10_trimmed_2_cut18_cutadapt_log.txt
 
-CORTO LAS PRIMERAS 8 PARA R3-30_2:
+# CORTO LAS PRIMERAS 8 PARA R3-30_2:
 cutadapt \
 --cut 8 \
 -o ${OUTPUT_DIR}/R3-30_trimmed_2.fastq \
 ${INPUT_DIR}/R3-30_2.fastq \
 > ${OUTPUT_DIR}/R3-30_trimmed_2_cut8_cutadapt_log.txt
 
-CORTO LAS PRIMERAS 8 PARA R4-50_2:
+# CORTO LAS PRIMERAS 8 PARA R4-50_2:
 cutadapt \
 --cut 8 \
 -o ${OUTPUT_DIR}/R4-50_trimmed_2.fastq \
 ${INPUT_DIR}/R4-50_2.fastq \
 > ${OUTPUT_DIR}/R4-50_trimmed_2_cut8_cutadapt_log.txt
 
-CORTO LAS PRIMERAS 8 PARA R5-70_2:
+# CORTO LAS PRIMERAS 8 PARA R5-70_2:
 cutadapt \
 --cut 8 \
 -o ${OUTPUT_DIR}/R5-70_trimmed_2.fastq \
 ${INPUT_DIR}/R5-70_2.fastq \
 > ${OUTPUT_DIR}/R5-70_trimmed_2_cut8_cutadapt_log.txt
 
-CORTO LAS PRIMERAS 8 PARA R6-100_2:
+# CORTO LAS PRIMERAS 8 PARA R6-100_2:
 cutadapt \
 --cut 8 \
 -o ${OUTPUT_DIR}/R6-100_trimmed_2.fastq \
 ${INPUT_DIR}/R6-100_2.fastq \
 > ${OUTPUT_DIR}/R6-100_trimmed_2_cut8_cutadapt_log.txt
 
-CORTO LAS PRIMERAS 8 PARA TK1-t0_2:
+# CORTO LAS PRIMERAS 8 PARA TK1-t0_2:
 cutadapt \
 --cut 8 \
 -o ${OUTPUT_DIR}/TK1-t0_trimmed_2.fastq \
 ${INPUT_DIR}/TK1-t0_2.fastq \
 > ${OUTPUT_DIR}/TK1-t0_trimmed_2_cut8_cutadapt_log.txt
 
-CORTO LAS PRIMERAS 8 PARA TK1-t30_2:
+# CORTO LAS PRIMERAS 8 PARA TK1-t30_2:
 cutadapt \
 --cut 8 \
 -o ${OUTPUT_DIR}/TK1-t30_trimmed_2.fastq \
 ${INPUT_DIR}/TK1-t30_2.fastq \
 > ${OUTPUT_DIR}/TK1-t30_trimmed_2_cut8_cutadapt_log.txt
 
-CORTO LAS PRIMERAS 8 PARA TK1-t60_2:
+# CORTO LAS PRIMERAS 8 PARA TK1-t60_2:
 cutadapt \
 --cut 8 \
 -o ${OUTPUT_DIR}/TK1-t60_trimmed_2.fastq \
 ${INPUT_DIR}/TK1-t60_2.fastq \
 > ${OUTPUT_DIR}/TK1-t60_trimmed_2_cut8_cutadapt_log.txt
 
-SI HUBIERA QUERIDO:
-Esto sirve para sacar de todas (x ej. _1.fastq) los 8 primeros
+# SI HUBIERA QUERIDO:
+# Esto sirve para sacar de todas (x ej. _1.fastq) los 8 primeros
 parallel --link --jobs 4 \
 'cutadapt \
 --cut 8 \
@@ -178,7 +178,7 @@ mkdir logs
 mv *txt logs/.
 
 # opción 2:
-CORTO LAS PRIMERAS 8 PARA R1-C_2 y lo corto en 260:
+# CORTO LAS PRIMERAS 8 PARA R1-C_2 y lo corto en 260:
 cutadapt \
 --cut 8 \
 -l 260 \
@@ -186,7 +186,7 @@ cutadapt \
 ${INPUT_DIR}/R1-C_2.fastq \
 > ${OUTPUT_DIR}/R1-C_trimmed_2.txt
 
-CORTO LAS PRIMERAS 18 PARA R2-10_2 y lo corto en 230:
+# CORTO LAS PRIMERAS 18 PARA R2-10_2 y lo corto en 230:
 cutadapt \
 --cut 18 \
 -l 230 \
@@ -194,7 +194,7 @@ cutadapt \
 ${INPUT_DIR}/R2-10_2.fastq \
 > ${OUTPUT_DIR}/R2-10_trimmed_2.txt
 
-CORTO LAS PRIMERAS 8 PARA R3-30_2 y lo corto en 230:
+# CORTO LAS PRIMERAS 8 PARA R3-30_2 y lo corto en 230:
 cutadapt \
 --cut 8 \
 -l 230 \
@@ -202,7 +202,7 @@ cutadapt \
 ${INPUT_DIR}/R3-30_2.fastq \
 > ${OUTPUT_DIR}/R3-30_trimmed_2.txt
 
-CORTO LAS PRIMERAS 8 PARA R4-50_2 y lo corto en 260:
+# CORTO LAS PRIMERAS 8 PARA R4-50_2 y lo corto en 260:
 cutadapt \
 --cut 8 \
 -l 260 \
@@ -210,7 +210,7 @@ cutadapt \
 ${INPUT_DIR}/R4-50_2.fastq \
 > ${OUTPUT_DIR}/R4-50_trimmed_2.txt
 
-CORTO LAS PRIMERAS 8 PARA R5-70_2 y lo corto en 230:
+# CORTO LAS PRIMERAS 8 PARA R5-70_2 y lo corto en 230:
 cutadapt \
 --cut 8 \
 -l 230 \
@@ -218,7 +218,7 @@ cutadapt \
 ${INPUT_DIR}/R5-70_2.fastq \
 > ${OUTPUT_DIR}/R5-70_trimmed_2.txt
 
-CORTO LAS PRIMERAS 8 PARA R6-100_2 y lo corto en 230:
+# CORTO LAS PRIMERAS 8 PARA R6-100_2 y lo corto en 230:
 cutadapt \
 --cut 8 \
 -l 230 \
@@ -226,7 +226,7 @@ cutadapt \
 ${INPUT_DIR}/R6-100_2.fastq \
 > ${OUTPUT_DIR}/R6-100_trimmed_2.txt
 
-CORTO LAS PRIMERAS 8 PARA TK1-t0_2 y lo corto en 230:
+# CORTO LAS PRIMERAS 8 PARA TK1-t0_2 y lo corto en 230:
 cutadapt \
 --cut 8 \
 -l 230 \
@@ -234,7 +234,7 @@ cutadapt \
 ${INPUT_DIR}/TK1-t0_2.fastq \
 > ${OUTPUT_DIR}/TK1-t0_trimmed_2.txt
 
-CORTO LAS PRIMERAS 8 PARA TK1-t30_2 y lo corto en 230:
+# CORTO LAS PRIMERAS 8 PARA TK1-t30_2 y lo corto en 230:
 cutadapt \
 --cut 8 \
 -l 230 \
@@ -242,7 +242,7 @@ cutadapt \
 ${INPUT_DIR}/TK1-t30_2.fastq \
 > ${OUTPUT_DIR}/TK1-t30_trimmed_2.txt
 
-CORTO LAS PRIMERAS 8 PARA TK1-t60_2 y lo corto en 230:
+# CORTO LAS PRIMERAS 8 PARA TK1-t60_2 y lo corto en 230:
 cutadapt \
 --cut 8 \
 -l 230 \
@@ -285,8 +285,7 @@ do
 done
 echo "Proceso completado."
 
-
-sigue el código:
+# sigue el código:
 cd /Users/valentinagirardi/Downloads/MUESTRASBITETK
 OUTPUT_DIR=06_trimming_qc2
 mkdir ${OUTPUT_DIR}
