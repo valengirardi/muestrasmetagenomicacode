@@ -254,12 +254,19 @@ mkdir logs
 mv *txt logs/.
 
 # opción de CORTE POR CALIDAD:
-# USANDO BBMAP (Lo hice para 10, 12, 8, 6 y 7.3 y probé usarlos solos o con el corte del inicio ya hecho)
+# USANDO BBMAP (Lo hice para 10, 12, 8, 6 y 7.3 y probé usarlos solos o con el corte del inicio ya hecho - si filtro mucho (ejemplo 20 o 15, me quedan menos secuencias de r que de f y dada2 no puede ser usado)
 for file in "${INPUT_DIR}"/*.fastq; do
     base_name=$(basename "${file}" .fastq)
     bbduk.sh in="${file}" out="${OUTPUT_DIR}/${base_name}.fastq" qtrim=rl trimq=10
     echo "Archivo ${file} procesado."
 done
+
+# Podría solucionar el problema de las secuencias diferentes eliminando las secuencias desalineadas (aquellas que no tienen pareja correspondiente en el archivo opuesto)
+# Primero, se debe identificar las secuencias que tienen una pareja correspondiente en el archivo reverse.fastq: se buscan las IDs de secuencia presentes en el archivo reverse.fastq utilizando el siguiente comando. Esto creará un archivo llamado reverse_ids.txt que contiene solo las IDs de secuencia del archivo reverse.fastq.
+grep -oP '^@(\S+)' reverse.fastq | sed 's/@//' > reverse_ids.txt
+# Luego, se eliminan las secuencias del archivo forward.fastq que no tienen una pareja correspondiente: se buscan las secuencias del archivo forward.fastq cuyas IDs no están presentes en el archivo reverse_ids.txt y se guardan en un nuevo archivo:
+grep -A 3 -f <(sed 's/^/@/' reverse_ids.txt) forward.fastq | grep -v "^--$" > forward_clean.fastq
+
 
 # USANDO FASTX TOOLKIT:
 for file in "${INPUT_DIR}"/*.fastq; do
